@@ -1,6 +1,8 @@
 body {
   background-color: wheat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQUssdUJBQUE7RUFDTCxhQUFBO0FDRUEiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQUssdUJBQUE7RUFDTCxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtBQ0VBIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */

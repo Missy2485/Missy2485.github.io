@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "prefix": "PostCSS ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "Missy2485",
   "license": "ISC",
-  "Browserlist": "last 4 versions",
+  "browserslist": "last 4 versions",
   "devDependencies": {
     "typescript": "^4.3.5"
   }
