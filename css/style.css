@@ -15,18 +15,17 @@
 }
 .container.loading {
   background-color: transparent;
-  animation: loading-container 2s 150ms linear both;
-}
-
-h2 {
-  text-align: center;
-  color: blue;
-  position: relative;
-  z-index: 0;
+  animation: loading-container 2s 4s linear both;
 }
 
 .loading-txt {
   height: min-content;
+}
+.loading-txt h2 {
+  text-align: center;
+  color: blue;
+  position: relative;
+  z-index: 1;
 }
 
 .spinner {
@@ -71,7 +70,8 @@ h2 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  animation: content 0ms 2.3s both;
+  animation: content 0ms 5s both;
+  visibility: hidden;
 }
 
 @keyframes content {
@@ -81,6 +81,7 @@ h2 {
   100% {
     transform: translateY(100%);
     overflow: visible;
+    visibility: visible;
   }
 }
 

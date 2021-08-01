@@ -20,19 +20,20 @@ $content-delay: $spinner-dur + $spinner-delay*2;
 
 &.loading{
    background-color: transparent;
-   animation: loading-container $spinner-dur $spinner-delay linear both; 
+   animation: loading-container $spinner-dur 4s linear both; 
    }
   
 }
   
-h2 { 
-text-align: center;
-color:blue;
-position: relative;
-z-index: 0;
-}
+
 .loading-txt{
    height:min-content;
+   h2 { 
+      text-align: center;
+      color:blue;
+      position: relative;
+      z-index: 1;
+      }
 }
 .spinner{
    display: block;
@@ -76,16 +77,19 @@ z-index: 0;
    top: 0%;
      width:100%;
    height:100%;
-   overflow: hidden; 
-      animation: content 0ms $content-delay both;
+  overflow: hidden;
+      animation: content 0ms 5s both;
+      visibility: hidden;
 }
 
 @keyframes content {
    0% {
        transform: translateY(0%);
+       
    }
    100% {
        transform: translateY(100%);
        overflow: visible;
+       visibility: visible;
    }
 }
