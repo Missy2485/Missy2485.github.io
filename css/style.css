@@ -1,17 +1,87 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import 'variables';
- *   |         ^^^^^^^^^^^
- *   '
- *   sass\main.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import 'variables';\d\a   \2502          ^^^^^^^^^^^\a   \2575 \a   sass\\main.scss 1:9  root stylesheet";
+*, html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+  justify-content: center;
 }
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container.loading {
+  background-color: transparent;
+  animation: loading-container 2s 150ms linear both;
+}
+
+h2 {
+  text-align: center;
+  color: blue;
+  position: relative;
+  z-index: 0;
+}
+
+.loading-txt {
+  height: min-content;
+}
+
+.spinner {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  z-index: 1;
+  -webkit-animation: loading 2s 150ms linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: loading 2s 150ms linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(1turn);
+  }
+  to {
+    transform: rotate(2turn);
+  }
+}
+@keyframes loading-container {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+#content {
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: content 0ms 2.3s both;
+}
+
+@keyframes content {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+    overflow: visible;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
