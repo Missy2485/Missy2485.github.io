@@ -1,6 +1,27 @@
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
+$background-lightgrey: #f6f6f6;
+$background-grey: #eaeaea;
+$light-color-primary:lighten($color-primary, 35%);
+
+$button-color:white;
+$box-shadow: $background-lightgrey;
+$box-shadow-dark: $background-grey;
+$box-shadow-hover:$background-grey;
+
 $font-text:Roboto;
 $font-logo:Shrikhand;
 $font-title:Shrikhand;
+
+$form-padding:0px 0px 10px 0px;
+$form-h1-padding:20px 0px 20px 0px;
+$form-p-padding:0px 0px 20px 0px;
+
+$section-margin: 20px 0px 20px 0px;
+
+$border-radius: 20px;
+
+$spinner-dur: 2s;
+$spinner-delay: 150ms;
+$content-delay: $spinner-dur + $spinner-delay*2;

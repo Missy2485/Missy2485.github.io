@@ -1,95 +1,128 @@
+@import "variable";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+@import "keyframes";
+@import "links";
 
-$spinner-dur: 2s;
-$spinner-delay: 150ms;
-$content-delay: $spinner-dur + $spinner-delay*2;
- *, html, body{
-   height:100%;
-   margin:0;
-   padding:0;
-   align-content: center;
-   justify-content: center;
-
-  
+* {
+  margin: 0;
+  padding: 0;
 }
-.container{
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-&.loading{
-   background-color: transparent;
-   animation: loading-container $spinner-dur 4s linear both; 
-   }
-  
-}
-  
-
-.loading-txt{
-   height:min-content;
-   h2 { 
-      text-align: center;
-      color:blue;
-      position: relative;
-      z-index: 1;
-      }
-}
-.spinner{
-   display: block;
- position: relative;
- left: 50%;
- top: 50%;
- width: 150px;
- height: 150px;
- margin: -75px 0 0 -75px;
- border-radius: 50%;
- border: 3px solid transparent;
- border-top-color: #3498db;
- z-index: 1;
- 
- -webkit-animation: loading $spinner-dur $spinner-delay linear infinite; /* Chrome, Opera 15+, Safari 5+ */
- animation: loading $spinner-dur $spinner-delay linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-   
-
-
-
-@keyframes loading{
-   from {transform: rotate(1turn);
-   }
-   to {
-      transform: rotate(2turn);
-   }
+  &.loading {
+    background-color: transparent;
+    animation: loading-container $spinner-dur 4s linear both;
   }
-
-  @keyframes loading-container {
-   0%{transform: translateY(0%);
- 
-   } 100% {
-       transform: translateY(-100%);
-   }
-   }
-#content{
-   position: absolute;
-   z-index: -1;
-   left: 0%;
-   top: 0%;
-     width:100%;
-   height:100%;
-  overflow: hidden;
-      animation: content 0ms 5s both;
-      visibility: hidden;
 }
 
-@keyframes content {
-   0% {
-       transform: translateY(0%);
-       
-   }
-   100% {
-       transform: translateY(100%);
-       overflow: visible;
-       visibility: visible;
-   }
+.loading-txt {
+  height: min-content;
+  h2 {
+    text-align: center;
+    color: $color-primary;
+    position: relative;
+    z-index: 1;
+  }
+}
+.spinner {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: $color-primary;
+  z-index: 1;
+
+  -webkit-animation: loading $spinner-dur $spinner-delay linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: loading $spinner-dur $spinner-delay linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+.content {
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+  overflow: hidden;
+  animation: content 0ms 5s both;
+  visibility: hidden;
+  width: 100%;
+}
+
+header {
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+  .header-image {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+  }
+}
+.fa-map-marker-alt {
+  color: blue;
+  visibility: visible;
+}
+.locate-restaurant {
+  text-align: center;
+  background-color: $background-lightgrey;
+  padding: $form-padding;
+  margin:$section-margin;
+}
+.locate-input {
+  background-color: $background-grey;
+  padding: 10px;
+}
+.input-field {
+  background-color: transparent;
+  border: transparent;
+  text-align: center;
+}
+h1 {
+  padding: $form-h1-padding;
+}
+
+button {
+  background-image: linear-gradient($color-secondary, $color-primary);
+  color: $button-color;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px;
+  box-shadow: 2px 2px 1px $box-shadow;
+  margin: 20px 0px 20px 0px;
+}
+
+.how-it-works{
+  display: flex;
+  flex-direction: column;
+
+  .steps{
+    background-color: $background-lightgrey;
+    margin: 15px 10px 15px 10px;
+    padding: 10px;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-shadow: 2px 2px 1px $box-shadow-dark;
+    row-gap: 10px;
+    .step-number{
+      line-height:5px;
+      border:1px solid $color-primary;
+      padding:5px;
+      border-radius: 10px;
+      background-color: $color-primary;
+      color:$button-color;
+    }
+  }
 }

@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" link href="css/prefixed/style.css">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" link href="css/style.css" />
+  </head>
+  <body>
+    <div class="container loading">
+      <div class="spinner"></div>
+      <div class="loading-txt">
+        <h2>Thank you for waiting! Your page will load shortly.</h2>
+      </div>
 
-</head>
-<body>
-  <div class="container loading">
-    
-          <div class="spinner">
-           
-          </div>
-        <div class="loading-txt">
-           <h2>Thank you for waiting! Your page will load shortly.</h2> 
-        </div>
-  
-<div id="content">
-  <header>
-    <div class="header-container">
-    <div class="back-nav"><i class="fas fa-arrow-left"></i></div>
-    <div class="header-image"><img src="images\logo\ohmyfood.png" alt="oh my food"></div>
-    </div>
- </header>
-<Section class="locate-restaurant">
- <form action="">
-    <input type="text" class="location">
-    <div class="locate-restaurant-text">
-    <h1>Book the menu you like</h1>
-    <p1>Discover top-of-the-art restaurants we picked for you</p1>
-</div>
-<button class="explore-restaurants">Explore our restaurants</button>
- </form>
-</Section>
-<Section class="how-it-works">
-<h2>How it works</h2> 
-<div class="instructions-container">
- <div class="steps">
-    <div class="step1-img"></div>
-    <div class="step1-phone-img"></div>
-    <div class="steps-text">Choose a restaurant</div>
- </div>
- <div class="steps">
-    <div class="step2-img"></div>
-    <div class="step2-list-img"></div>
-    <div class="steps-text">Create your menu</div>
- </div>
- <div class="steps">
-    <div class="step3-img"></div>
-    <div class="step3-building-img"></div>
-    <div class="steps-text">Go enjoy it at the restaurant</div>
- </div>
-</div>  
-</Section>
-<Section class="Choose-restaurant">
- <h2>Restaurant</h2>
- <div class="choose-restaurant-container">
-    <div class="choose-restaurant-card">
-       <div class="choose-restaurant-image">
-          <div class="img"><img src="" alt=""></div>
-       <div class="new-img"><img src="" alt="">
-       </div></div>
-       <div class="choose-restaurant-text-container">
-          <div class="choose-text">
-             <h3>The Full Pallette</h3>
-             <h4>New York</h4>
-          </div>
-          <div class="favorite"><img src="" alt=""></div>
-       </div>
-    </div>
- </div>
-</Section>
+      <div class="content">
+        <header>
+          <img
+            src="images\logo\ohmyfood.png"
+            alt="oh my food"
+            class="header-image"
+          />
+        </header>
 
-</div>
-  </div>
-</body>
+        <section class="locate-restaurant">
+          <form action="">
+             <div class="locate-input">
+                <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Paris,Belleville" class="input-field">
+         </div>
+            
+            <div class="locate-restaurant-text">
+              <h1>Book the menu you like</h1>
+              <p>Discover top-of-the-art restaurants we picked for you</p>
+            </div>
+            <button class="explore-restaurants">Explore our restaurants</button>
+          </form>
+        </section>
+        <section class="how-it-works">
+          <div><h2>How it works</h2></div>
+          
+            <div class="steps">
+               <div class="step-number">1</div>
+              <div class="step1-phone-img"></div>
+              <div class="steps-text">Choose a restaurant</div>
+              
+            </div>
+            <div class="steps">
+              <div class="step-number">2</div>
+              <div class="step2-list-img"></div>
+              <div class="steps-text">Create your menu</div>
+            </div>
+            <div class="steps">
+              <div class="step-number">3</div>
+              <div class="step3-building-img"></div>
+              <div class="steps-text">Go enjoy it at the restaurant</div>
+            </div>
+          
+        </section>
+        <section class="Choose-restaurant">
+          <h2>Restaurant</h2>
+          <div class="choose-restaurant-container">
+            <div class="choose-restaurant-card">
+              <div class="choose-restaurant-image">
+                <div class="img"><img src="" alt="" /></div>
+                <div class="new-img"><img src="" alt="" /></div>
+              </div>
+              <div class="choose-restaurant-text-container">
+                <div class="choose-text">
+                  <h3>The Full Pallette</h3>
+                  <h4>New York</h4>
+                </div>
+                <div class="favorite"><img src="" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
