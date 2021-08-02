@@ -169,4 +169,30 @@ button {
   color: white;
 }
 
+.Choose-restaurant {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+}
+.Choose-restaurant .choose-restaurant-card {
+  width: 90%;
+  height: 40%;
+  overflow: hidden;
+  display: grid;
+}
+.Choose-restaurant .choose-restaurant-card .choose-restaurant-card-not-flex {
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 50px;
+}
+.Choose-restaurant .choose-restaurant-card .choose-restaurant-card-not-flex .img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.Choose-restaurant .choose-restaurant-card .choose-restaurant-card-not-flex .img img {
+  overflow: hidden;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=style.css.map */

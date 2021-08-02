@@ -126,3 +126,28 @@ button {
     }
   }
 }
+
+.Choose-restaurant{
+  background-color: $background-lightgrey;
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+ .choose-restaurant-card{
+    width:90%;
+    height:40%;
+    overflow:hidden;
+    display: grid;
+     .choose-restaurant-card-not-flex{
+    grid-template-columns:100% ;
+    grid-template-rows: 100px 50px;
+    .img{overflow: hidden;
+    width:100%;
+    height:100%;
+    img{overflow:hidden;
+
+      object-fit:cover;
+      
+    }
+  }
+}
+ }}
