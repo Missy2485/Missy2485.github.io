@@ -1,80 +1,120 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" link href="css/style.css" />
-  </head>
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- LINKS TO CSS FILE ("STYLESHEET")  -->
+  <link href="css/style.css" type="text/css" rel="stylesheet"> 
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/ff028ac823.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Oh my food</title>
+</head>
   <body>
     <div class="container loading">
       <div class="spinner"></div>
       <div class="loading-txt">
         <h2>Thank you for waiting! Your page will load shortly.</h2>
       </div>
-
       <div class="content">
         <header>
           <img
-            src="images\logo\ohmyfood.png"
-            alt="oh my food"
+            src="images/logo/ohmyfood.png"
+            alt="oh my food logo"
             class="header-image"
           />
         </header>
-
-        <section class="locate-restaurant">
-          <form action="">
-             <div class="locate-input">
-                <i class="fas fa-map-marker-alt"></i>
-            <input type="text" placeholder="Paris,Belleville" class="input-field">
-         </div>
-            
-            <div class="locate-restaurant-text">
-              <h1>Book the menu you like</h1>
-              <p>Discover top-of-the-art restaurants we picked for you</p>
+        <section class="locate">
+          <form action="#">
+            <div class="locate-input">
+              <i class="fas fa-map-marker-alt"></i>
+              <input
+                type="text"
+                placeholder="Paris, Belleville"
+                class="locate-input_field"
+              />
             </div>
-            <button class="explore-restaurants">Explore our restaurants</button>
+            <h1>Book the menu you like</h1>
+            <p>Discover top-of-the-art restaurants we picked for you</p>
+            <button class="locate-button">Explore our restaurants</button>
           </form>
         </section>
         <section class="how-it-works">
-          <div><h2>How it works</h2></div>
-          
-            <div class="steps">
-               <div class="step-number">1</div>
-              <div class="step1-phone-img"></div>
-              <div class="steps-text">Choose a restaurant</div>
-              
-            </div>
-            <div class="steps">
-              <div class="step-number">2</div>
-              <div class="step2-list-img"></div>
-              <div class="steps-text">Create your menu</div>
-            </div>
-            <div class="steps">
-              <div class="step-number">3</div>
-              <div class="step3-building-img"></div>
-              <div class="steps-text">Go enjoy it at the restaurant</div>
-            </div>
-          
-        </section>
-        <section class="Choose-restaurant">
-          <h2>Restaurant</h2>
-                      <div class="choose-restaurant-card">
-                         <div class="choose-restaurant-card-not-flex">
-              <div class="choose-restaurant-image">
-                <div class="img"><img src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="The Full Pallette" /></div>
-                <div class="new-img">New</div>
-              </div>
-              <div class="choose-text-container">
-                <div class="choose-text">
-                  <h3>The Full Pallette</h3>
-                  <h4>New York</h4>
-                </div>
-                <div class="favorite"><img src="" alt="" /></div>
-              </div>
-            </div>
+          <h2>How it works</h2>
+          <div class="steps">
+            <h4 class="steps-number">1</h4>
+            <!-- <div class="steps-img"> -->
+            <i class="fas fa-mobile-alt steps-img"></i>
+            <!-- </div> -->
+            <div class="steps-text">Choose a restaurant</div>
+            <!-- had trouble getting line-height without the div or something else containing text -->
           </div>
-         
-
-          
+          <div class="steps">
+            <div class="steps-number">2</div>
+            <i class="fas fa-list-ul steps-img"></i>
+            <div class="steps-text">Create your menu</div>
+          </div>
+          <div class="steps">
+            <div class="steps-number">3</div>
+            <i class="fas fa-store steps-img"></i>
+            <div class="steps-text">Go enjoy it at the restaurant</div>
+          </div>
+        </section>
+        <section class="choose">
+          <h2>Restaurant</h2>
+          <div class="choose-container">
+            <a href="menu.html">
+              <div class="choose-container-card">
+                <div class="new-img">New</div>
+                <!-- <div class="img"> -->
+                <figure>
+                  <img
+                    src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    alt="The Full Pallette"
+                    class="choose-container-card_image"
+                  />
+                  <figcaption class="choose-container-card_info">
+                    <div class="choose-container-card_info--text">
+                      <h3>The Full Pallette</h3>
+                      <h4>New York</h4>
+                    </div>
+                    <div>
+                      <i class="far fa-heart fa-2x"></i
+                      ><i class="fas fa-heart fa-2x"></i>
+                    </div>
+                  </figcaption>
+                </figure>
+                <!-- </div> -->
+              </div>
+            </a>
+          </div>
+          <div class="choose-container">
+            <a href="menu.html">
+              <div class="choose-container-card">
+                <div class="new-img">New</div>
+                <!-- <div class="img"> -->
+                <img
+                  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="The Full Pallette"
+                  class="choose-container-card_image"
+                />
+                <!-- </div> -->
+                <div class="choose-container-card_info">
+                  <div class="choose-container-card_info--text">
+                    <h3>The Full Pallette</h3>
+                    <h4>New York</h4>
+                  </div>
+                  <div>
+                    <i class="far fa-heart fa-2x"></i
+                    ><i class="fas fa-heart fa-2x"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </section>
       </div>
     </div>

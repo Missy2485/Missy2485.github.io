@@ -1,27 +1,40 @@
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$background-lightgrey: #f6f6f6;
-$background-grey: #eaeaea;
-$light-color-primary:lighten($color-primary, 35%);
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-quaternary: #f2f2f2;
+$color-quinary: white;
+// $background-lightgrey: #f6f6f6;
+// $dark-color-quaternary: #eaeaea;
+$light-color-quaternary: lighten($color-quaternary, 35%);
+$dark-color-quaternary: darken($color-quaternary, 20%);
+$light-color-primary: lighten($color-primary, 35%);
 
-$button-color:white;
-$box-shadow: $background-lightgrey;
-$box-shadow-dark: $background-grey;
-$box-shadow-hover:$background-grey;
+$button-color: white;
+$box-shadow: $color-quaternary;
+$box-shadow-dark: $dark-color-quaternary;
+$box-shadow-hover: $dark-color-quaternary;
+$box-shadow-light: $light-color-quaternary;
 
-$font-text:Roboto;
-$font-logo:Shrikhand;
-$font-title:Shrikhand;
+// $font-text: Roboto;
+// $font-logo: Shrikhand;
+// $font-title: Shrikhand;
 
-$form-padding:0px 0px 10px 0px;
-$form-h1-padding:20px 0px 20px 0px;
-$form-p-padding:0px 0px 20px 0px;
+$font-family: Roboto;
+
+$form-padding: 0px 0px 10px 0px;
+$form-h1-padding: 20px 0px 20px 0px;
+$form-p-padding: 0px 0px 20px 0px;
 
 $section-margin: 20px 0px 20px 0px;
+$title-margin: 20px 0px 0px 20px;
+$card-margin: 20px;
 
 $border-radius: 20px;
 
 $spinner-dur: 2s;
 $spinner-delay: 150ms;
-$content-delay: $spinner-dur + $spinner-delay*2;
+$content-delay: $spinner-dur + $spinner-delay * 2;
+
+$font-weight_title: 900;
+$font-weight_name: 500;
+$font-weight_city: 300;

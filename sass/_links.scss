@@ -1,11 +1,11 @@
 a {
-   text-decoration: none;
-   color:black;
+  text-decoration: none;
+  color: black;
 }
 
-button:hover{
-filter:brightness(120%);
-box-shadow: 2px 2px 1px $box-shadow-hover;
+button:hover {
+  filter: brightness(120%);
+  box-shadow: 2px 2px darkgreen;
 }
 
 // NOT WORKING -- need to look it up again
@@ -13,7 +13,10 @@ box-shadow: 2px 2px 1px $box-shadow-hover;
 //    border: 0px solid transparent;
 // }
 
-.how-it-works .steps:hover{
-   background-color:$light-color-primary;
-   box-shadow: 2px 2px 1px $box-shadow-hover;
-   }
+.how-it-works .steps:hover {
+  background-color: $light-color-primary;
+  box-shadow: 2px 2px $box-shadow-hover;
+  i {
+    color: $color-primary;
+  }
+}
