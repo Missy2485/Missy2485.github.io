@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
 @import "keyframes";
 @import "links";
+@import "footer";
 
 * {
   margin: 0;
@@ -98,9 +99,9 @@ header {
     font-weight: $font-weight_title;
   }
   &-button {
-    background-image: linear-gradient($color-secondary, $color-primary);
-    color: $button-color;
+    background-image:$background-gradient;
     padding: 10px;
+    color: $button-color;
     border-radius: 20px;
     border: 0px;
     box-shadow: 2px 2px $box-shadow-dark; //*1px\\ $box-shadow;
@@ -217,10 +218,14 @@ header {
         &.fa-2x {
           position: absolute;
           z-index: 1;
-          margin-top: 20px;
+          margin-top: 10px;
+          right: 35px;
+         
           // color:blue;
           // background-color: green;
           // border:2px solid yellow;
+          // &:hover{visibility: hidden;}
+        
         }
       }
 
@@ -229,8 +234,10 @@ header {
           position: absolute;
           z-index: 0;
           visibility: hidden;
-          margin-top: 20px;
-        }
+          margin-top: 10px;
+        right: 35px;
+        // transform-origin: 0% 50%;
+      }
       }
     }
   }

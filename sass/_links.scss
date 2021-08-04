@@ -2,7 +2,37 @@ a {
   text-decoration: none;
   color: black;
 }
-
+.far:hover {
+    visibility: hidden;
+    &:hover + .fas{
+      visibility: visible;
+      background: -webkit-linear-gradient($color-primary, $color-secondary,);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+//  animation favoritefill works as should in dev at 10% speed - need to fix it so it looks like that 
+//  all the time- also fill starts from top and goes to bottom and gradient works but at the end
+//  the gradient is gone & is fully purple
+// transform-origin: 50% 0%;
+  animation: favorite-fill 10000ms ease;
+               }}
+               @keyframes favorite-fill {
+                 0%{
+                  //  transform:easeY(1);
+                   height:0%;
+                  //  overflow-y: hidden;
+                               }
+                               50%{
+                                // transform: easeY(0.5);
+                               
+                                height:50%;
+                                // overflow-y: hidden;
+                              }
+                 100% {
+                  //  transform:easeY(0);
+                height:100%;
+              }
+                 
+               }
 button:hover {
   filter: brightness(120%);
   box-shadow: 2px 2px darkgreen;

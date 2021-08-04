@@ -3,6 +3,8 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $color-quaternary: #f2f2f2;
 $color-quinary: white;
+$background-gradient: linear-gradient($color-secondary, $color-primary);
+$color-gradient:$background-gradient;
 // $background-lightgrey: #f6f6f6;
 // $dark-color-quaternary: #eaeaea;
 $light-color-quaternary: lighten($color-quaternary, 35%);
