@@ -10,16 +10,19 @@ $color-gradient:$background-gradient;
 $light-color-quaternary: lighten($color-quaternary, 35%);
 $dark-color-quaternary: darken($color-quaternary, 20%);
 $light-color-primary: lighten($color-primary, 35%);
+$dark-color-quaternary2: darken($color-quaternary, 40%);
 
 $button-color: white;
 $box-shadow: $color-quaternary;
 $box-shadow-dark: $dark-color-quaternary;
 $box-shadow-hover: $dark-color-quaternary;
 $box-shadow-light: $light-color-quaternary;
-
+// $box-shadow-dark2: opacity(1.2);
 // $font-text: Roboto;
 // $font-logo: Shrikhand;
 // $font-title: Shrikhand;
+$darkopacity:$color-quaternary 1.2;
+
 
 $font-family: Roboto;
 
@@ -34,9 +37,16 @@ $card-margin: 20px;
 $border-radius: 20px;
 
 $spinner-dur: 2s;
-$spinner-delay: 150ms;
+$spinner-delay: 70ms;
+$spinner-delay2: 150ms;
 $content-delay: $spinner-dur + $spinner-delay * 2;
 
 $font-weight_title: 900;
 $font-weight_name: 500;
 $font-weight_city: 300;
+
+$breakpoints: (
+    tablet: 600px,
+    desktop: 1000px);
+
+    $nonmobile-body-width:600px;

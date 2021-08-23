@@ -1,0 +1,17 @@
+@function opacity($opacity-name){
+   @return map-get($opacity-weights, $opacity-name);}
+
+   $opacity-weights :( regular: 1, dark:1.2, light:0.8);
+		
+   // @function dark-opacity($color) {
+   //    @return opacity($color, 1.2);
+   // }
+   // @mixin opacity-calc($opacity, $opacityN: N){
+   //    css-property:arguement;
+   //    @if arguementN{
+   //    css-property: function {
+   //    css-property: arguement / 2;}}
+
+
+    /*setting alpha = 0.1*/
+   //  background: rgba(0, 151, 19, 0.1);

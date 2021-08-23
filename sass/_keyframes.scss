@@ -1,5 +1,5 @@
 
-@keyframes loading {
+@keyframes spinner {
    from {
      transform: rotate(1turn);
    }
@@ -10,21 +10,100 @@
  
  @keyframes loading-container {
    0% {
-     transform: translateY(0%);
+    //  transform: translateY(0%);
+    opacity: 1;
+    z-index: 200;
    }
    100% {
-     transform: translateY(-100%);
+    //  transform: translateY(-100%);
+    opacity: 0;
+    z-index: -200;
    }
  }
+//  @keyframes move {
+//    to {z-index: -200;}
+   
+//  }
 
  
 @keyframes content {
    0% {
-     transform: translateY(0%);
+//     //  transform: translateY(-100%);
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
    }
+//   //  25%{
+//   //    opacity: 25%;
+//   //   //  overflow: visible;
+//   //   //  visibility: visible;
+//   //  }
    100% {
-     transform: translateY(100%);
+//      opacity: 1;
+//     //  transform: translateY(0%);
      overflow: visible;
      visibility: visible;
    }
  }
+
+ @keyframes menu_content {
+  0% {
+//     //  transform: translateY(-100%);
+   opacity: 0;
+   overflow: hidden;
+   visibility: hidden;
+  }
+//   //  25%{
+//   //    opacity: 25%;
+//   //   //  overflow: visible;
+//   //   //  visibility: visible;
+//   //  }
+  100% {
+//      opacity: 1;
+//     //  transform: translateY(0%);
+    overflow: visible;
+    visibility: visible;
+  }
+}
+@keyframes price {
+  0%{
+    transform: translateX(0px);
+  }
+  50%{  transform: translateX(-15px);}
+  100%{
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes select{
+  0%{opacity:0;
+    transform: translateX(30px);
+  }
+  50%{opacity:1;
+    transform: translateX(15px);
+    // transform: rotate(1turn);
+  }
+   100%{
+    opacity: 1;
+    transform: translateX(0px);
+    // transform: rotate(2turn);
+  }
+  
+}
+
+@keyframes check{
+  // 0%{opacity:0;
+  //   transform: translateX(30px);
+  // }
+  50%{
+    // opacity:1;
+    // transform: translateX(15px);
+    transform: rotate(1turn);
+  }
+   100%{
+    // opacity: 1;
+    // transform: translateX(0px);
+    transform: rotate(2turn);
+  }
+  
+}

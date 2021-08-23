@@ -1,0 +1,168 @@
+@mixin spinner {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+@mixin fill-page {
+  position: absolute;
+  top: 0;
+  // left: 0;
+  // width: 100%;
+  max-width: $nonmobile-body-width;
+  height: 100%;
+  margin:0 auto;
+}
+
+// @mixin opacity-calc{
+//    @if 1,
+
+// }
+@mixin home_heart1 {
+  position: absolute;
+  z-index: 1;
+  margin-top: 10px;
+  right: 35px;
+}
+@mixin home_heart2 {
+  position: absolute;
+  z-index: 0;
+  visibility: hidden;
+  margin-top: 10px;
+  right: 35px;
+  // transform-origin: 0% 50%;
+}
+@mixin menu_heart1 {
+  position: absolute;
+  z-index: 1;
+  margin-top: 20px;
+  right: 35px;
+}
+@mixin menu_heart2 {
+  position: absolute;
+  z-index: 0;
+  visibility: hidden;
+  margin-top: 20px;
+  right: 35px;
+  // transform-origin: 0% 50%;
+}
+@mixin gradient_button {
+  background-image: $background-gradient;
+  padding: 10px;
+  color: $button-color;
+  border-radius: 20px;
+  border: 0px;
+  box-shadow: 2px 2px $box-shadow-dark; //*1px\\ $box-shadow;
+  margin: 20px 0px 20px 0px;
+}
+
+@mixin h2_menu--hr {
+  width: 35px;
+  height: 2px;
+  background-color: $color-tertiary;
+  border: 0 none;
+  margin-top: -5px;
+}
+
+@mixin menu-flex {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+@mixin menu-card {
+  &:hover .select-price {
+    animation: price 2s forwards;
+  }
+  &:hover .select-check {
+    animation: select 2s forwards;
+  }
+  &:hover .fa-check-circle {
+    animation: check 2s forwards;
+  }
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  // padding:10px;
+  box-shadow: 2px 2px $box-shadow-dark;
+  overflow: hidden;
+  
+  .description {
+    padding: 10px;
+  }
+  
+  .select {
+    position: relative;
+    // &:hover .select-price {
+    //   animation: select 3s;
+    // }
+    &-price {
+      position: absolute;
+      z-index: 1;
+      bottom: 0px;
+      right: 0px;
+      padding-right: 35%;
+      padding-top: 100%;
+      padding-bottom: 10px;
+      
+     
+    }
+    &-check {
+      position: absolute;
+      opacity: 0;
+      background-color: $color-tertiary;
+      // right: 20px;
+      // top:20px;
+      // padding: 22px;
+     color:white;
+     right: 0px;
+     text-align: center;
+     /* top: 20px; */
+     width: 48px;
+     height: 63px;
+     line-height: 60px;
+    }
+  }
+}
+
+@mixin tablet-only {
+   @media screen and (min-width: map-get($breakpoints, tablet)){
+     body{
+       max-width:600px;
+       margin: 0 auto;
+     }
+   }}
+      //  grid-template-columns: 1fr;
+      // .choose{
+      //    flex-direction: row;
+      //    flex-wrap: wrap;
+      //    column-gap: 1%;
+      //    h2{
+      //       width:100%;
+      //          }
+      //          &-container{
+      //             width: 42%;
+      //          }
+                
+      //         }
+              
+      //          .menu-form .entrees{
+      //          flex-direction: row;
+      //          flex-wrap: wrap; 
+      //          &-card{
+      //            width:30%;
+      //          }
+      //                        }
+      //                        .h2_menu{
+      //                          width: 99%;
+      //                        }
+      //         .order{
+      //           width:15%;
+      //         }}}
+        
+              
+    
+
+        
+   

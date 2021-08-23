@@ -1,6 +1,7 @@
+/*setting alpha = 0.1*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
-@keyframes loading {
+@keyframes spinner {
   from {
     transform: rotate(1turn);
   }
@@ -10,20 +11,67 @@
 }
 @keyframes loading-container {
   0% {
-    transform: translateY(0%);
+    opacity: 1;
+    z-index: 200;
   }
   100% {
-    transform: translateY(-100%);
+    opacity: 0;
+    z-index: -200;
   }
 }
 @keyframes content {
   0% {
-    transform: translateY(0%);
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
   100% {
-    transform: translateY(100%);
     overflow: visible;
     visibility: visible;
+  }
+}
+@keyframes menu_content {
+  0% {
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  100% {
+    overflow: visible;
+    visibility: visible;
+  }
+}
+@keyframes price {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}
+@keyframes select {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes check {
+  50% {
+    transform: rotate(1turn);
+  }
+  100% {
+    transform: rotate(2turn);
   }
 }
 a {
@@ -32,14 +80,16 @@ a {
 }
 
 .far:hover {
-  visibility: hidden;
+  background: -webkit-linear-gradient(-135deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .far:hover:hover + .fas {
   visibility: visible;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  background: -webkit-linear-gradient(-135deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: favorite-fill 10000ms ease;
+  color: transparent;
+  animation: favorite-fill 1000ms ease-in-out;
 }
 
 @keyframes favorite-fill {
@@ -47,15 +97,15 @@ a {
     height: 0%;
   }
   50% {
-    height: 50%;
+    height: 10%;
   }
   100% {
-    height: 100%;
+    height: 20%;
   }
 }
 button:hover {
-  filter: brightness(120%);
-  box-shadow: 2px 2px darkgreen;
+  opacity: 0.8;
+  box-shadow: 2px 2px #8c8c8c;
 }
 
 .how-it-works .steps:hover {
@@ -64,6 +114,10 @@ button:hover {
 }
 .how-it-works .steps:hover i {
   color: #9356dc;
+}
+
+Footer li a:hover {
+  color: #99e2d0;
 }
 
 Footer {
@@ -89,6 +143,244 @@ Footer ul li i {
   padding-right: 10px;
 }
 
+.menu-image {
+  width: 100%;
+  background-color: lightgrey;
+}
+.menu-image-header {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  overflow: hidden;
+  z-index: 3;
+}
+.menu-image figcaption {
+  position: relative;
+  z-index: 5;
+  top: -50px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: lightgrey;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  height: 50px;
+}
+.menu-image figcaption h1 {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: Shrikhand;
+}
+.menu-image figcaption .far {
+  position: absolute;
+  z-index: 1;
+  margin-top: 20px;
+  right: 35px;
+}
+.menu-image figcaption .fas {
+  position: absolute;
+  z-index: 0;
+  visibility: hidden;
+  margin-top: 20px;
+  right: 35px;
+}
+
+.menu-form {
+  background-color: lightgrey;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.menu-form .entrees {
+  margin-top: -20px;
+  visibility: hidden;
+  animation-name: menu_content;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.menu-form .entrees-card {
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  box-shadow: 2px 2px #bfbfbf;
+  overflow: hidden;
+}
+.menu-form .entrees-card:hover .select-price {
+  animation: price 2s forwards;
+}
+.menu-form .entrees-card:hover .select-check {
+  animation: select 2s forwards;
+}
+.menu-form .entrees-card:hover .fa-check-circle {
+  animation: check 2s forwards;
+}
+.menu-form .entrees-card .description {
+  padding: 10px;
+}
+.menu-form .entrees-card .select {
+  position: relative;
+}
+.menu-form .entrees-card .select-price {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 0px;
+  padding-right: 35%;
+  padding-top: 100%;
+  padding-bottom: 10px;
+}
+.menu-form .entrees-card .select-check {
+  position: absolute;
+  opacity: 0;
+  background-color: #99e2d0;
+  color: white;
+  right: 0px;
+  text-align: center;
+  /* top: 20px; */
+  width: 48px;
+  height: 63px;
+  line-height: 60px;
+}
+.menu-form .main-dish {
+  visibility: hidden;
+  animation: menu_content 3s 2s forwards;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.menu-form .main-dish-card {
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  box-shadow: 2px 2px #bfbfbf;
+  overflow: hidden;
+}
+.menu-form .main-dish-card:hover .select-price {
+  animation: price 2s forwards;
+}
+.menu-form .main-dish-card:hover .select-check {
+  animation: select 2s forwards;
+}
+.menu-form .main-dish-card:hover .fa-check-circle {
+  animation: check 2s forwards;
+}
+.menu-form .main-dish-card .description {
+  padding: 10px;
+}
+.menu-form .main-dish-card .select {
+  position: relative;
+}
+.menu-form .main-dish-card .select-price {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 0px;
+  padding-right: 35%;
+  padding-top: 100%;
+  padding-bottom: 10px;
+}
+.menu-form .main-dish-card .select-check {
+  position: absolute;
+  opacity: 0;
+  background-color: #99e2d0;
+  color: white;
+  right: 0px;
+  text-align: center;
+  /* top: 20px; */
+  width: 48px;
+  height: 63px;
+  line-height: 60px;
+}
+.menu-form .dessert {
+  visibility: hidden;
+  animation: menu_content 3s 4s forwards;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.menu-form .dessert-card {
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  box-shadow: 2px 2px #bfbfbf;
+  overflow: hidden;
+}
+.menu-form .dessert-card:hover .select-price {
+  animation: price 2s forwards;
+}
+.menu-form .dessert-card:hover .select-check {
+  animation: select 2s forwards;
+}
+.menu-form .dessert-card:hover .fa-check-circle {
+  animation: check 2s forwards;
+}
+.menu-form .dessert-card .description {
+  padding: 10px;
+}
+.menu-form .dessert-card .select {
+  position: relative;
+}
+.menu-form .dessert-card .select-price {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 0px;
+  padding-right: 35%;
+  padding-top: 100%;
+  padding-bottom: 10px;
+}
+.menu-form .dessert-card .select-check {
+  position: absolute;
+  opacity: 0;
+  background-color: #99e2d0;
+  color: white;
+  right: 0px;
+  text-align: center;
+  /* top: 20px; */
+  width: 48px;
+  height: 63px;
+  line-height: 60px;
+}
+
+.h2_menu {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+}
+.h2_menu--hr {
+  width: 35px;
+  height: 2px;
+  background-color: #99e2d0;
+  border: 0 none;
+  margin-top: -5px;
+}
+
+.order {
+  background-image: linear-gradient(#ff79da, #9356dc);
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  border: 0px;
+  box-shadow: 2px 2px #bfbfbf;
+  margin: 20px 0px 20px 0px;
+  align-self: center;
+  width: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -101,26 +393,35 @@ body {
 .container {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  max-width: 600px;
   height: 100%;
+  margin: 0 auto;
 }
-.container.loading {
+.container .test,
+.container .test.loading {
+  animation: loading-container 5s, move 4s;
+  animation-fill-mode: forwards;
+}
+.container .test {
+  position: absolute;
+  top: 0;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+.container .test.loading {
   background-color: transparent;
-  animation: loading-container 2s 4s linear both;
 }
-
-.loading-txt {
+.container .test .loading-txt {
   height: min-content;
 }
-.loading-txt h2 {
+.container .test .loading-txt h2 {
   text-align: center;
   color: #9356dc;
   position: relative;
   z-index: 1;
 }
-
-.spinner {
+.container .spinner {
   display: block;
   position: relative;
   left: 50%;
@@ -132,20 +433,41 @@ body {
   border: 3px solid transparent;
   border-top-color: #9356dc;
   z-index: 1;
-  -webkit-animation: loading 2s 150ms linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
-  animation: loading 2s 150ms linear infinite;
+  animation: spinner 2s 70ms linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+.container .spinner:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-top-color: #ff79da;
+  animation: spinner 3s 70ms linear infinite;
+}
+.container .spinner:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #99e2d0;
+  animation: spinner 2s 70ms linear infinite;
 }
 
 .content {
-  position: absolute;
-  z-index: -1;
+  position: relative;
   left: 0%;
   top: 0%;
   height: 100%;
   overflow: hidden;
-  animation: content 0ms 5s both;
+  animation: content 8s 4s both;
   visibility: hidden;
   width: 100%;
 }
@@ -153,11 +475,20 @@ body {
 header {
   padding-top: 15px;
   padding-bottom: 10px;
+  display: grid;
+}
+header nav {
+  margin-left: 30px;
+  display: inline-flex;
+}
+header nav .fa-arrow-left {
+  vertical-align: -50%;
 }
 header .header-image {
   display: block;
   margin: 0 auto;
   height: 35px;
+  position: relative;
 }
 
 .locate {

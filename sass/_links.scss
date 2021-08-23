@@ -4,13 +4,13 @@ a {
 }
 .far:hover {
   background:-webkit-linear-gradient(-135deg, $color-primary, $color-secondary);
- background-clip: text;
+ -webkit-background-clip: text;
   color: transparent;
   
     &:hover + .fas{
       visibility: visible;
-      background: linear-gradient(-135deg, $color-primary, $color-secondary);
-  background-clip: text;
+      background: -webkit-linear-gradient(-135deg, $color-primary, $color-secondary);
+      -webkit-background-clip: text;
   color: transparent;
 //  animation favoritefill works as should in dev at 10% speed - need to fix it so it looks like that 
 //  all the time- also fill starts from top and goes to bottom and gradient works but at the end
