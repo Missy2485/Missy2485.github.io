@@ -93,23 +93,30 @@ header {
   padding-top: 15px;
   padding-bottom: 10px;
   display: grid;
-  
+
+  @include small-mobile-only;
+
   nav{
-margin-left: 30px;
-// margin-top: 30px;
-display: inline-flex;
+// margin-left: 30px;
+// // margin-top: 30px;
+// display: inline-flex;
+
+margin: auto 6%;
+    display: inline-flex;
+    line-height: 10px;
 
 .fa-arrow-left{
 vertical-align: -50%;
 }
 
   }
-
+  
   .header-image {
     display: block;
     margin: 0 auto;
-    height: 35px;
+    height: 30px;
     position: relative;
+    
   }
   
 }

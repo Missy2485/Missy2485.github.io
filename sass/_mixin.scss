@@ -22,14 +22,14 @@
   position: absolute;
   z-index: 1;
   margin-top: 10px;
-  right: 35px;
+  right: 15px;
 }
 @mixin home_heart2 {
   position: absolute;
   z-index: 0;
   visibility: hidden;
   margin-top: 10px;
-  right: 35px;
+  right: 15px;
   // transform-origin: 0% 50%;
 }
 @mixin menu_heart1 {
@@ -79,18 +79,18 @@
     animation: select 2s linear forwards;
   }
   &:hover .fa-check-circle {
-    animation: check 2s linear forwards;
+    animation: check 2s  linear forwards;
   }
   background-color: white;
   border-radius: 20px;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: auto 80px;
   // padding:10px;
   box-shadow: 2px 2px $box-shadow-dark;
   overflow: hidden;
 
   .description {
-    @include small-mobile-only;
+    // @include small-mobile-only;
     padding: 10px;
     // width: 100%;
     // white-space: nowrap;
@@ -160,22 +160,24 @@
 }
 @mixin small-mobile-only {
   @media screen and (max-width: map-get($breakpoints, smobile)) {
+   nav{ margin-left: 15px;}
+    .header-image { height: 25px;}
     // .description {
     // padding: 10px;
     // // width: 100%;
     // white-space: nowrap;
     //     overflow: clip;
     // // text-overflow: ellipsis;
-    h3 {
-      font-size: 10px;
-    }
-    p {
-      font-size: 9px;
-      font-weight: 300;
-      // }
+    // h3 {
+    //   font-size: 10px;
+    // }
+    // p {
+    //   font-size: 9px;
+    //   font-weight: 300;
+    //   // }
     }
   }
-}
+// }
 //  grid-template-columns: 1fr;
 // .choose{
 //    flex-direction: row;
