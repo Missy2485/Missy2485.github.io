@@ -138,6 +138,11 @@ vertical-align: -50%;
     padding: $form-h1-padding;
     font-weight: $font-weight_title;
   }
+  p{
+    
+      width: 90%;
+      margin: 0 auto;
+  }
 
   &-button {
    @include gradient_button;

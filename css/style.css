@@ -44,12 +44,14 @@
 @keyframes price {
   0% {
     transform: translateX(0px);
+    z-index: 200;
   }
   50% {
-    transform: translateX(-15px);
+    transform: translateX(-25px);
   }
   100% {
-    transform: translateX(-30px);
+    transform: translateX(-50px);
+    z-index: 200;
   }
 }
 @keyframes select {
@@ -67,10 +69,18 @@
   }
 }
 @keyframes check {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
   50% {
+    opacity: 1;
+    transform: translateX(15px);
     transform: rotate(1turn);
   }
   100% {
+    opacity: 1;
+    transform: translateX(0px);
     transform: rotate(2turn);
   }
 }
@@ -89,7 +99,7 @@ a {
   background: -webkit-linear-gradient(-135deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   color: transparent;
-  animation: favorite-fill 1000ms ease-in-out;
+  animation: favorite-fill 1000ms linear;
 }
 
 @keyframes favorite-fill {
@@ -212,16 +222,41 @@ Footer ul li i {
   overflow: hidden;
 }
 .menu-form .entrees-card:hover .select-price {
-  animation: price 2s forwards;
+  animation: price 2s linear forwards;
 }
 .menu-form .entrees-card:hover .select-check {
-  animation: select 2s forwards;
+  animation: select 2s linear forwards;
 }
 .menu-form .entrees-card:hover .fa-check-circle {
-  animation: check 2s forwards;
+  animation: check 2s linear forwards;
 }
 .menu-form .entrees-card .description {
   padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 359px) {
+  .menu-form .entrees-card .description h3 {
+    font-size: 10px;
+  }
+  .menu-form .entrees-card .description p {
+    font-size: 9px;
+    font-weight: 300;
+  }
+}
+.menu-form .entrees-card .description h3 {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-form .entrees-card .description p {
+  font-size: 14px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-form .entrees-card .select {
   position: relative;
@@ -231,9 +266,12 @@ Footer ul li i {
   z-index: 1;
   bottom: 0px;
   right: 0px;
-  padding-right: 35%;
-  padding-top: 100%;
+  padding-right: 10px;
+  padding-top: 30px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: white;
+  line-height: 15px;
 }
 .menu-form .entrees-card .select-check {
   position: absolute;
@@ -243,9 +281,10 @@ Footer ul li i {
   right: 0px;
   text-align: center;
   /* top: 20px; */
-  width: 48px;
+  width: 50px;
   height: 63px;
   line-height: 60px;
+  z-index: 200;
 }
 .menu-form .main-dish {
   visibility: hidden;
@@ -263,16 +302,41 @@ Footer ul li i {
   overflow: hidden;
 }
 .menu-form .main-dish-card:hover .select-price {
-  animation: price 2s forwards;
+  animation: price 2s linear forwards;
 }
 .menu-form .main-dish-card:hover .select-check {
-  animation: select 2s forwards;
+  animation: select 2s linear forwards;
 }
 .menu-form .main-dish-card:hover .fa-check-circle {
-  animation: check 2s forwards;
+  animation: check 2s linear forwards;
 }
 .menu-form .main-dish-card .description {
   padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 359px) {
+  .menu-form .main-dish-card .description h3 {
+    font-size: 10px;
+  }
+  .menu-form .main-dish-card .description p {
+    font-size: 9px;
+    font-weight: 300;
+  }
+}
+.menu-form .main-dish-card .description h3 {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-form .main-dish-card .description p {
+  font-size: 14px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-form .main-dish-card .select {
   position: relative;
@@ -282,9 +346,12 @@ Footer ul li i {
   z-index: 1;
   bottom: 0px;
   right: 0px;
-  padding-right: 35%;
-  padding-top: 100%;
+  padding-right: 10px;
+  padding-top: 30px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: white;
+  line-height: 15px;
 }
 .menu-form .main-dish-card .select-check {
   position: absolute;
@@ -294,9 +361,10 @@ Footer ul li i {
   right: 0px;
   text-align: center;
   /* top: 20px; */
-  width: 48px;
+  width: 50px;
   height: 63px;
   line-height: 60px;
+  z-index: 200;
 }
 .menu-form .dessert {
   visibility: hidden;
@@ -314,16 +382,41 @@ Footer ul li i {
   overflow: hidden;
 }
 .menu-form .dessert-card:hover .select-price {
-  animation: price 2s forwards;
+  animation: price 2s linear forwards;
 }
 .menu-form .dessert-card:hover .select-check {
-  animation: select 2s forwards;
+  animation: select 2s linear forwards;
 }
 .menu-form .dessert-card:hover .fa-check-circle {
-  animation: check 2s forwards;
+  animation: check 2s linear forwards;
 }
 .menu-form .dessert-card .description {
   padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 359px) {
+  .menu-form .dessert-card .description h3 {
+    font-size: 10px;
+  }
+  .menu-form .dessert-card .description p {
+    font-size: 9px;
+    font-weight: 300;
+  }
+}
+.menu-form .dessert-card .description h3 {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-form .dessert-card .description p {
+  font-size: 14px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-form .dessert-card .select {
   position: relative;
@@ -333,9 +426,12 @@ Footer ul li i {
   z-index: 1;
   bottom: 0px;
   right: 0px;
-  padding-right: 35%;
-  padding-top: 100%;
+  padding-right: 10px;
+  padding-top: 30px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: white;
+  line-height: 15px;
 }
 .menu-form .dessert-card .select-check {
   position: absolute;
@@ -345,9 +441,10 @@ Footer ul li i {
   right: 0px;
   text-align: center;
   /* top: 20px; */
-  width: 48px;
+  width: 50px;
   height: 63px;
   line-height: 60px;
+  z-index: 200;
 }
 
 .h2_menu {
@@ -510,6 +607,10 @@ header .header-image {
 .locate h1 {
   padding: 20px 0px 20px 0px;
   font-weight: 900;
+}
+.locate p {
+  width: 90%;
+  margin: 0 auto;
 }
 .locate-button {
   background-image: linear-gradient(#ff79da, #9356dc);

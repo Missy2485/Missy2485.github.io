@@ -11,7 +11,7 @@
   // width: 100%;
   max-width: $nonmobile-body-width;
   height: 100%;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 // @mixin opacity-calc{
@@ -67,18 +67,19 @@
 @mixin menu-flex {
   display: flex;
   flex-direction: column;
+  // flex-wrap: nowrap;
   row-gap: 10px;
 }
 
 @mixin menu-card {
   &:hover .select-price {
-    animation: price 2s forwards;
+    animation: price 2s linear forwards;
   }
   &:hover .select-check {
-    animation: select 2s forwards;
+    animation: select 2s linear forwards;
   }
   &:hover .fa-check-circle {
-    animation: check 2s forwards;
+    animation: check 2s linear forwards;
   }
   background-color: white;
   border-radius: 20px;
@@ -87,11 +88,32 @@
   // padding:10px;
   box-shadow: 2px 2px $box-shadow-dark;
   overflow: hidden;
-  
+
   .description {
+    @include small-mobile-only;
     padding: 10px;
+    // width: 100%;
+    // white-space: nowrap;
+    //     overflow: clip;
+    // text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    h3 {
+      font-size: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
-  
+
   .select {
     position: relative;
     // &:hover .select-price {
@@ -102,11 +124,12 @@
       z-index: 1;
       bottom: 0px;
       right: 0px;
-      padding-right: 35%;
-      padding-top: 100%;
+      padding-right: 10px;
+      padding-top: 30px;
       padding-bottom: 10px;
-      
-     
+      padding-left: 10px;
+      background-color: white;
+      line-height: 15px;
     }
     &-check {
       position: absolute;
@@ -115,54 +138,68 @@
       // right: 20px;
       // top:20px;
       // padding: 22px;
-     color:white;
-     right: 0px;
-     text-align: center;
-     /* top: 20px; */
-     width: 48px;
-     height: 63px;
-     line-height: 60px;
+      color: white;
+      right: 0px;
+      text-align: center;
+      /* top: 20px; */
+      width: 50px;
+      height: 63px;
+      line-height: 60px;
+      z-index: 200;
     }
   }
 }
 
 @mixin tablet-only {
-   @media screen and (min-width: map-get($breakpoints, tablet)){
-     body{
-       max-width:600px;
-       margin: 0 auto;
-     }
-   }}
-      //  grid-template-columns: 1fr;
-      // .choose{
-      //    flex-direction: row;
-      //    flex-wrap: wrap;
-      //    column-gap: 1%;
-      //    h2{
-      //       width:100%;
-      //          }
-      //          &-container{
-      //             width: 42%;
-      //          }
-                
-      //         }
-              
-      //          .menu-form .entrees{
-      //          flex-direction: row;
-      //          flex-wrap: wrap; 
-      //          &-card{
-      //            width:30%;
-      //          }
-      //                        }
-      //                        .h2_menu{
-      //                          width: 99%;
-      //                        }
-      //         .order{
-      //           width:15%;
-      //         }}}
-        
-              
-    
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
+    body {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+@mixin small-mobile-only {
+  @media screen and (max-width: map-get($breakpoints, smobile)) {
+    // .description {
+    // padding: 10px;
+    // // width: 100%;
+    // white-space: nowrap;
+    //     overflow: clip;
+    // // text-overflow: ellipsis;
+    h3 {
+      font-size: 10px;
+    }
+    p {
+      font-size: 9px;
+      font-weight: 300;
+      // }
+    }
+  }
+}
+//  grid-template-columns: 1fr;
+// .choose{
+//    flex-direction: row;
+//    flex-wrap: wrap;
+//    column-gap: 1%;
+//    h2{
+//       width:100%;
+//          }
+//          &-container{
+//             width: 42%;
+//          }
 
-        
-   
+//         }
+
+//          .menu-form .entrees{
+//          flex-direction: row;
+//          flex-wrap: wrap;
+//          &-card{
+//            width:30%;
+//          }
+//                        }
+//                        .h2_menu{
+//                          width: 99%;
+//                        }
+//         .order{
+//           width:15%;
+//         }}}

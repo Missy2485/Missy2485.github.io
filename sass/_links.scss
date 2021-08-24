@@ -16,7 +16,7 @@ a {
 //  all the time- also fill starts from top and goes to bottom and gradient works but at the end
 //  the gradient is gone & is fully purple
 // transform-origin: 50% 0%;
-  animation: favorite-fill 1000ms ease-in-out;
+  animation: favorite-fill 1000ms linear;
                }}
                @keyframes favorite-fill {
                  0%{
