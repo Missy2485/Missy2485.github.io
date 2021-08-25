@@ -5,8 +5,7 @@ $color-quaternary: #f2f2f2;
 $color-quinary: white;
 $background-gradient: linear-gradient($color-secondary, $color-primary);
 $color-gradient:$background-gradient;
-// $background-lightgrey: #f6f6f6;
-// $dark-color-quaternary: #eaeaea;
+
 $light-color-quaternary: lighten($color-quaternary, 35%);
 $dark-color-quaternary: darken($color-quaternary, 20%);
 $light-color-primary: lighten($color-primary, 35%);
@@ -17,10 +16,7 @@ $box-shadow: $color-quaternary;
 $box-shadow-dark: $dark-color-quaternary;
 $box-shadow-hover: $dark-color-quaternary;
 $box-shadow-light: $light-color-quaternary;
-// $box-shadow-dark2: opacity(1.2);
-// $font-text: Roboto;
-// $font-logo: Shrikhand;
-// $font-title: Shrikhand;
+
 $darkopacity:$color-quaternary 1.2;
 
 
@@ -45,9 +41,14 @@ $font-weight_title: 900;
 $font-weight_name: 500;
 $font-weight_city: 300;
 
+$fontsize-menu_h1: 20px;
+$fontsize-main_name: 15px;
+$fontsize-main_city: 14px;
+
 $breakpoints: (
     smobile:359px,
     tablet: 600px,
     desktop: 1000px);
 
-    $nonmobile-body-width:600px;
+$nonmobile-body-width:600px;
+$position-a:absolute;

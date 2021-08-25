@@ -3,50 +3,31 @@ a {
   color: black;
 }
 .far:hover {
-  background:-webkit-linear-gradient(-135deg, $color-primary, $color-secondary);
- -webkit-background-clip: text;
+  background: -webkit-linear-gradient(
+    -135deg,
+    $color-primary,
+    $color-secondary
+  );
+  -webkit-background-clip: text;
   color: transparent;
-  
-    &:hover + .fas{
-      visibility: visible;
-      background: -webkit-linear-gradient(-135deg, $color-primary, $color-secondary);
-      -webkit-background-clip: text;
-  color: transparent;
-//  animation favoritefill works as should in dev at 10% speed - need to fix it so it looks like that 
-//  all the time- also fill starts from top and goes to bottom and gradient works but at the end
-//  the gradient is gone & is fully purple
-// transform-origin: 50% 0%;
-  animation: favorite-fill 1s linear;
-               }}
-               @keyframes favorite-fill {
-                 0%{
-                  //  transform:easeY(1);
-                   height:0%;
-                  //  overflow-y: hidden;
-                               }
-                               50%{
-                                // transform: easeY(0.5);
-                               
-                                height:30%;
-                                // overflow-y: hidden;
-                              }
-                 100% {
-                  //  transform:easeY(0);
-                height:60%;
-              }
-                 
-               }
+
+  &:hover + .fas {
+    visibility: visible;
+    background: -webkit-linear-gradient(
+      -135deg,
+      $color-primary,
+      $color-secondary
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: favorite-fill 1s linear;
+  }
+}
 button:hover {
-   opacity: opacity(light);
-  // filter: brightness(120%);
+  opacity: opacity(light);
   box-shadow: 2px 2px $dark-color-quaternary2;
 }
-
-// NOT WORKING -- need to look it up again
-// input-field:focus{
-//    border: 0px solid transparent;
-// }
-
 .how-it-works .steps:hover {
   background-color: $light-color-primary;
   box-shadow: 2px 2px $box-shadow-hover;
@@ -54,7 +35,10 @@ button:hover {
     color: $color-primary;
   }
 }
-Footer{
-li a:hover{
-  color:$color-tertiary;
-}}
+// Hover for menu-cards is found in @mixins
+
+Footer {
+  li a:hover {
+    color: $color-tertiary;
+  }
+}

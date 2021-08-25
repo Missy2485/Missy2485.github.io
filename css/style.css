@@ -30,6 +30,17 @@
     visibility: visible;
   }
 }
+@keyframes favorite-fill {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 30%;
+  }
+  100% {
+    height: 60%;
+  }
+}
 @keyframes menu_content {
   0% {
     opacity: 0;
@@ -102,17 +113,6 @@ a {
   animation: favorite-fill 1s linear;
 }
 
-@keyframes favorite-fill {
-  0% {
-    height: 0%;
-  }
-  50% {
-    height: 30%;
-  }
-  100% {
-    height: 60%;
-  }
-}
 button:hover {
   opacity: 0.8;
   box-shadow: 2px 2px #8c8c8c;
@@ -153,6 +153,11 @@ Footer ul li i {
   padding-right: 10px;
 }
 
+@media screen and (max-width: 359px) {
+  .fontsize-menu_h1 {
+    font-size: 10px;
+  }
+}
 .menu-image {
   width: 100%;
   background-color: lightgrey;
@@ -163,10 +168,12 @@ Footer ul li i {
   width: 100%;
   overflow: hidden;
   z-index: 3;
+  height: 300px;
 }
 .menu-image figcaption {
   position: relative;
   z-index: 5;
+  max-height: 400px;
   top: -50px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -179,18 +186,22 @@ Footer ul li i {
   margin-left: 20px;
   margin-top: 20px;
   font-family: Shrikhand;
+  font-size: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-image figcaption .far {
   position: absolute;
   z-index: 1;
-  margin-top: 20px;
+  margin-top: 25px;
   right: 35px;
 }
 .menu-image figcaption .fas {
   position: absolute;
   z-index: 0;
   visibility: hidden;
-  margin-top: 20px;
+  margin-top: 25px;
   right: 35px;
 }
 
@@ -272,7 +283,6 @@ Footer ul li i {
   color: white;
   right: 0px;
   text-align: center;
-  /* top: 20px; */
   width: 50px;
   height: 63px;
   line-height: 60px;
@@ -343,7 +353,6 @@ Footer ul li i {
   color: white;
   right: 0px;
   text-align: center;
-  /* top: 20px; */
   width: 50px;
   height: 63px;
   line-height: 60px;
@@ -414,7 +423,6 @@ Footer ul li i {
   color: white;
   right: 0px;
   text-align: center;
-  /* top: 20px; */
   width: 50px;
   height: 63px;
   line-height: 60px;
@@ -468,25 +476,20 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-.container .test,
-.container .test.loading {
+.container .loading {
   animation: loading-container 5s, move 4s;
   animation-fill-mode: forwards;
-}
-.container .test {
   position: absolute;
   top: 0;
   max-width: 600px;
   height: 100%;
   margin: 0 auto;
-}
-.container .test.loading {
   background-color: transparent;
 }
-.container .test .loading-txt {
+.container .loading .loading-txt {
   height: min-content;
 }
-.container .test .loading-txt h2 {
+.container .loading .loading-txt h2 {
   text-align: center;
   color: #9356dc;
   position: relative;
@@ -549,11 +552,8 @@ header {
   display: grid;
 }
 @media screen and (max-width: 359px) {
-  header nav {
-    margin-left: 15px;
-  }
-  header .header-image {
-    height: 25px;
+  header .fontsize-menu_h1 {
+    font-size: 10px;
   }
 }
 header nav {
@@ -684,7 +684,7 @@ header .header-image {
   width: 100%;
   height: 100%;
   border-radius: 20px 20px 0px 0px;
-  object-position: bottom;
+  object-position: center;
   position: relative;
   z-index: 1;
 }
@@ -699,23 +699,25 @@ header .header-image {
   margin-top: 4px;
   margin-left: 10px;
   font-weight: 500;
+  font-size: 15px;
 }
 .choose-container-card_info--text h4 {
   margin-left: 10px;
   margin-bottom: -10px;
   font-weight: 300;
+  font-size: 14px;
 }
-.choose-container-card .far.fa-2x {
+.choose-container-card .far.fa-heart {
   position: absolute;
   z-index: 1;
-  margin-top: 10px;
+  margin-top: 18px;
   right: 15px;
 }
-.choose-container-card .fas.fa-2x {
+.choose-container-card .fas.fa-heart {
   position: absolute;
   z-index: 0;
   visibility: hidden;
-  margin-top: 10px;
+  margin-top: 18px;
   right: 15px;
 }
 

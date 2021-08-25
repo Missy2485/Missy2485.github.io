@@ -1,111 +1,100 @@
-
 @keyframes spinner {
-   from {
-     transform: rotate(1turn);
-   }
-   to {
-     transform: rotate(2turn);
-   }
- }
- 
- @keyframes loading-container {
-   0% {
-    //  transform: translateY(0%);
+  from {
+    transform: rotate(1turn);
+  }
+  to {
+    transform: rotate(2turn);
+  }
+}
+
+@keyframes loading-container {
+  0% {
     opacity: 1;
     z-index: 200;
-   }
-   100% {
-    //  transform: translateY(-100%);
+  }
+  100% {
     opacity: 0;
     z-index: -200;
-   }
- }
-//  @keyframes move {
-//    to {z-index: -200;}
-   
-//  }
+  }
+}
 
- 
 @keyframes content {
-   0% {
-//     //  transform: translateY(-100%);
+  0% {
     opacity: 0;
     overflow: hidden;
     visibility: hidden;
-   }
-//   //  25%{
-//   //    opacity: 25%;
-//   //   //  overflow: visible;
-//   //   //  visibility: visible;
-//   //  }
-   100% {
-//      opacity: 1;
-//     //  transform: translateY(0%);
-     overflow: visible;
-     visibility: visible;
-   }
- }
-
- @keyframes menu_content {
-  0% {
-//     //  transform: translateY(-100%);
-   opacity: 0;
-   overflow: hidden;
-   visibility: hidden;
   }
-//   //  25%{
-//   //    opacity: 25%;
-//   //   //  overflow: visible;
-//   //   //  visibility: visible;
-//   //  }
   100% {
-//      opacity: 1;
-//     //  transform: translateY(0%);
+    overflow: visible;
+    visibility: visible;
+  }
+}
+
+@keyframes favorite-fill {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 30%;
+  }
+  100% {
+    height: 60%;
+  }
+}
+
+@keyframes menu_content {
+  0% {
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  100% {
     overflow: visible;
     visibility: visible;
   }
 }
 @keyframes price {
-  0%{
+  0% {
     transform: translateX(0px);
     z-index: 200;
   }
-  50%{  transform: translateX(-25px);}
-  100%{
+  50% {
+    transform: translateX(-25px);
+  }
+  100% {
     transform: translateX(-50px);
     z-index: 200;
   }
 }
 
-@keyframes select{
-  0%{opacity:0;
+@keyframes select {
+  0% {
+    opacity: 0;
     transform: translateX(50px);
   }
-  50%{opacity:1;
+  50% {
+    opacity: 1;
     transform: translateX(25px);
-    // transform: rotate(1turn);
   }
-   100%{
+  100% {
     opacity: 1;
     transform: translateX(0px);
-    // transform: rotate(2turn);
   }
-  
 }
 
-@keyframes check{
-  0%{opacity:0;
+@keyframes check {
+  0% {
+    opacity: 0;
     transform: translateX(30px);
   }
-  50%{
-    opacity:1;
+  50% {
+    opacity: 1;
     transform: translateX(15px);
     transform: rotate(1turn);
   }
-   100%{
+  100% {
     opacity: 1;
     transform: translateX(0px);
     transform: rotate(2turn);
   }
-  
 }

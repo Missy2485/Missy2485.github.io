@@ -1,50 +1,42 @@
 @mixin spinner {
   content: "";
-  position: absolute;
+  position: $position-a;
   border-radius: 50%;
   border: 3px solid transparent;
 }
 @mixin fill-page {
-  position: absolute;
+  position: $position-a;
   top: 0;
-  // left: 0;
-  // width: 100%;
-  max-width: $nonmobile-body-width;
+ max-width: $nonmobile-body-width;
   height: 100%;
   margin: 0 auto;
 }
 
-// @mixin opacity-calc{
-//    @if 1,
-
-// }
 @mixin home_heart1 {
-  position: absolute;
+  position: $position-a;
   z-index: 1;
-  margin-top: 10px;
+  margin-top: 18px;
   right: 15px;
 }
 @mixin home_heart2 {
-  position: absolute;
+  position: $position-a;
   z-index: 0;
   visibility: hidden;
-  margin-top: 10px;
+  margin-top: 18px;
   right: 15px;
-  // transform-origin: 0% 50%;
 }
 @mixin menu_heart1 {
-  position: absolute;
+  position: $position-a;
   z-index: 1;
-  margin-top: 20px;
+  margin-top: 25px;
   right: 35px;
 }
 @mixin menu_heart2 {
-  position: absolute;
+  position: $position-a;
   z-index: 0;
   visibility: hidden;
-  margin-top: 20px;
+  margin-top: 25px;
   right: 35px;
-  // transform-origin: 0% 50%;
 }
 @mixin gradient_button {
   background-image: $background-gradient;
@@ -52,7 +44,7 @@
   color: $button-color;
   border-radius: 20px;
   border: 0px;
-  box-shadow: 2px 2px $box-shadow-dark; //*1px\\ $box-shadow;
+  box-shadow: 2px 2px $box-shadow-dark; 
   margin: 20px 0px 20px 0px;
 }
 
@@ -67,7 +59,6 @@
 @mixin menu-flex {
   display: flex;
   flex-direction: column;
-  // flex-wrap: nowrap;
   row-gap: 10px;
 }
 
@@ -79,24 +70,18 @@
     animation: select 2s linear forwards;
   }
   &:hover .fa-check-circle {
-    animation: check 2s  linear forwards;
+    animation: check 2s linear forwards;
   }
   background-color: white;
   border-radius: 20px;
   display: grid;
   grid-template-columns: auto 80px;
-  // padding:10px;
   box-shadow: 2px 2px $box-shadow-dark;
   overflow: hidden;
 
   .description {
-    // @include small-mobile-only;
     padding: 10px;
-    // width: 100%;
-    // white-space: nowrap;
-    //     overflow: clip;
-    // text-overflow: ellipsis;
-    white-space: nowrap;
+       white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     h3 {
@@ -116,11 +101,8 @@
 
   .select {
     position: relative;
-    // &:hover .select-price {
-    //   animation: select 3s;
-    // }
-    &-price {
-      position: absolute;
+      &-price {
+      position: $position-a;
       z-index: 1;
       bottom: 0px;
       right: 0px;
@@ -132,16 +114,12 @@
       line-height: 15px;
     }
     &-check {
-      position: absolute;
+      position: $position-a;
       opacity: 0;
       background-color: $color-tertiary;
-      // right: 20px;
-      // top:20px;
-      // padding: 22px;
-      color: white;
+           color: white;
       right: 0px;
       text-align: center;
-      /* top: 20px; */
       width: 50px;
       height: 63px;
       line-height: 60px;
@@ -160,48 +138,8 @@
 }
 @mixin small-mobile-only {
   @media screen and (max-width: map-get($breakpoints, smobile)) {
-   nav{ margin-left: 15px;}
-    .header-image { height: 25px;}
-    // .description {
-    // padding: 10px;
-    // // width: 100%;
-    // white-space: nowrap;
-    //     overflow: clip;
-    // // text-overflow: ellipsis;
-    // h3 {
-    //   font-size: 10px;
-    // }
-    // p {
-    //   font-size: 9px;
-    //   font-weight: 300;
-    //   // }
+    .fontsize-menu_h1 {
+      font-size: 10px;
     }
   }
-// }
-//  grid-template-columns: 1fr;
-// .choose{
-//    flex-direction: row;
-//    flex-wrap: wrap;
-//    column-gap: 1%;
-//    h2{
-//       width:100%;
-//          }
-//          &-container{
-//             width: 42%;
-//          }
-
-//         }
-
-//          .menu-form .entrees{
-//          flex-direction: row;
-//          flex-wrap: wrap;
-//          &-card{
-//            width:30%;
-//          }
-//                        }
-//                        .h2_menu{
-//                          width: 99%;
-//                        }
-//         .order{
-//           width:15%;
-//         }}}
+}
