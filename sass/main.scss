@@ -233,6 +233,9 @@ vertical-align: -50%;
         right: 30px;
         padding: 3px 20px 3px 20px;
         top: 30px;
+        &.hidden{
+          opacity: 0;
+        }
       }
       &_image {
         object-fit: cover;

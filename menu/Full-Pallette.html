@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINKS TO CSS FILE ("STYLESHEET")  -->
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/ff028ac823.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Oh my food</title>
+  </head>
+  <body>
+    <!-- <div class="container">
+       <div class="test loading">
+        <div class="spinner"></div>
+        <div class="loading-txt">
+          <h2>Thank you for waiting! Your page will load shortly.</h2>
+        </div>
+      </div> -->
+    <div class="menu-content">
+      <header>
+        <nav class="back">
+          <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+          <img
+            src="images/logo/ohmyfood.png"
+            alt="oh my food logo"
+            class="header-image"
+          />
+        </nav>
+      </header>
+      <section class="menu-image">
+        <figure>
+          <img
+            src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="Bastille"
+            class="menu-image-header OBP-bottom"
+          />
+          <figcaption>
+            <h1>Bastille</h1>
+            <div>
+              <i class="far fa-heart fa-2x"></i
+              ><i class="fas fa-heart fa-2x"></i>
+            </div>
+          </figcaption>
+        </figure>
+      </section>
+
+      <form class="menu-form">
+        <section class="entrees">
+          <h2 class="h2_menu">Entrees</h2>
+          <hr class="h2_menu--hr" />
+          <div class="entrees-card">
+            <div class="description">
+              <h3>Citrus Squid Carpaccio</h3>
+              <p>with orange zest</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">25€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+          <div class="entrees-card">
+            <div class="description">
+              <h3>Grandmother's Vegetable Soup</h3>
+              <p>Carrots, parsnips, Jerusalem artichoke</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">35€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+          <div class="entrees-card">
+            <div class="description">
+              <h3>Onion Soup</h3>
+              <p>Revisited</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">20€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="main-dish">
+          <h2 class="h2_menu">Main Dish</h2>
+          <hr class="h2_menu--hr" />
+          <div class="main-dish-card">
+            <div class="description">
+              <h3>Scallops</h3>
+              <p>with mashed parsnip</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">40€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+          <div class="main-dish-card">
+            <div class="description">
+              <h3>Magret de canard</h3>
+              <p>with mashed potatoes</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">35€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+          <div class="main-dish-card">
+            <div class="description">
+              <h3>Game Hen</h3>
+              <p>with vegetable gnocchis</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">44€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="dessert">
+          <h2 class="h2_menu">Desserts</h2>
+          <hr class="h2_menu--hr" />
+          <div class="dessert-card">
+            <div class="description">
+              <h3>Floral Ice Cream</h3>
+              <p>with hazelnut butter</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">18€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dessert-card">
+            <div class="description">
+              <h3>Chocolate Lava Cake</h3>
+              <p>Revisited</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">22€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dessert-card">
+            <div class="description">
+              <h3>Napolean</h3>
+              <p>with blueberries and marzipan</p>
+            </div>
+            <div class="select">
+              <h5 class="select-price">23€</h5>
+              <span class="select-check">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </div>
+          </div>
+        </section>
+        <button class="order">Order</button>
+      </form>
+      <footer>
+        <ul>
+          <li class="footer-title">ohmyfood</li>
+          <li>
+            <a href="suggest"
+              ><i class="fas fa-utensils"></i>Suggest a restaurant</a
+            >
+          </li>
+          <li>
+            <a href="partner"
+              ><i class="fas fa-hands-helping"></i>Become a Partner</a
+            >
+          </li>
+          <li><a href="legal">Legal</a></li>
+          <li>
+            <a
+              href="mailto:hello@openclassrooms.com?Subject=Contact%20Us"
+              target="_blank"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!-- </div> -->
+  </body>
+</html>

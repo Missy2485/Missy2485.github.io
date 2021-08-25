@@ -676,6 +676,9 @@ header .header-image {
   padding: 3px 20px 3px 20px;
   top: 30px;
 }
+.choose-container-card .new-img.hidden {
+  opacity: 0;
+}
 .choose-container-card_image {
   object-fit: cover;
   width: 100%;

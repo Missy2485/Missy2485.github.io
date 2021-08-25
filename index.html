@@ -1,25 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- LINKS TO CSS FILE ("STYLESHEET")  -->
-  <link href="css/style.css" type="text/css" rel="stylesheet"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINKS TO CSS FILE ("STYLESHEET")  -->
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
     <!-- icons -->
     <script
       src="https://kit.fontawesome.com/ff028ac823.js"
       crossorigin="anonymous"
     ></script>
     <title>Oh my food</title>
-</head>
+  </head>
   <body>
     <div class="container">
       <div class="test loading">
-      <div class="spinner"></div>
-      <div class="loading-txt">
-        <h2>Thank you for waiting! Your page will load shortly.</h2>
-      </div></div>
+        <div class="spinner"></div>
+        <div class="loading-txt">
+          <h2>Thank you for waiting! Your page will load shortly.</h2>
+        </div>
+      </div>
       <div class="content">
         <header>
           <img
@@ -47,11 +48,8 @@
           <h2>How it works</h2>
           <div class="steps">
             <h4 class="steps-number">1</h4>
-            <!-- <div class="steps-img"> -->
             <i class="fas fa-mobile-alt steps-img"></i>
-            <!-- </div> -->
             <div class="steps-text">Choose a restaurant</div>
-            <!-- had trouble getting line-height without the div or something else containing text -->
           </div>
           <div class="steps">
             <div class="steps-number">2</div>
@@ -67,10 +65,9 @@
         <section class="choose">
           <h2>Restaurant</h2>
           <div class="choose-container">
-            <a href="menu_Full-Pallette.html">
+            <a href="menu/Full-Pallette.html">
               <div class="choose-container-card">
                 <div class="new-img">New</div>
-                <!-- <div class="img"> -->
                 <figure>
                   <img
                     src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -88,7 +85,6 @@
                     </div>
                   </figcaption>
                 </figure>
-                <!-- </div> -->
               </div>
             </a>
           </div>
@@ -96,13 +92,55 @@
             <a href="menu.html">
               <div class="choose-container-card">
                 <div class="new-img">New</div>
-                <!-- <div class="img"> -->
                 <img
                   src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                   alt="The Full Pallette"
                   class="choose-container-card_image"
                 />
-                <!-- </div> -->
+                <div class="choose-container-card_info">
+                  <div class="choose-container-card_info--text">
+                    <h3>The Full Pallette</h3>
+                    <h4>New York</h4>
+                  </div>
+                  <div>
+                    <i class="far fa-heart fa-2x"></i
+                    ><i class="fas fa-heart fa-2x"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="choose-container">
+            <a href="menu.html">
+              <div class="choose-container-card">
+                <div class="new-img hidden">New</div>
+                <img
+                  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="The Full Pallette"
+                  class="choose-container-card_image"
+                />
+                <div class="choose-container-card_info">
+                  <div class="choose-container-card_info--text">
+                    <h3>The Full Pallette</h3>
+                    <h4>New York</h4>
+                  </div>
+                  <div>
+                    <i class="far fa-heart fa-2x"></i
+                    ><i class="fas fa-heart fa-2x"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="choose-container">
+            <a href="menu.html">
+              <div class="choose-container-card">
+                <div class="new-img hidden">New</div>
+                <img
+                  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="The Full Pallette"
+                  class="choose-container-card_image"
+                />
                 <div class="choose-container-card_info">
                   <div class="choose-container-card_info--text">
                     <h3>The Full Pallette</h3>
@@ -117,15 +155,29 @@
             </a>
           </div>
         </section>
-        <Footer>
+        <footer>
           <ul>
             <li class="footer-title">ohmyfood</li>
-          <li><a href="suggest"><i class="fas fa-utensils"></i>Suggest a restaurant</a></li>
-         <li><a href="partner"><i class="fas fa-hands-helping"></i>Become a Partner</a></li>
-         <li><a href="legal">Legal</a></li>
-        <li><a href="mailto:hello@openclassrooms.com?Subject=Contact%20Us" target="_blank">Contact</a></li>
-        </ul>
-        </Footer>
+            <li>
+              <a href="suggest"
+                ><i class="fas fa-utensils"></i>Suggest a restaurant</a
+              >
+            </li>
+            <li>
+              <a href="partner"
+                ><i class="fas fa-hands-helping"></i>Become a Partner</a
+              >
+            </li>
+            <li><a href="legal">Legal</a></li>
+            <li>
+              <a
+                href="mailto:hello@openclassrooms.com?Subject=Contact%20Us"
+                target="_blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </footer>
       </div>
     </div>
   </body>
