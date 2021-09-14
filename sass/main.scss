@@ -19,7 +19,7 @@ body {
 }
 .container {
   // This @include makes scroll bar not appear until after animation
-  @include fill-page;
+  @include fill-page2;
   .loading {
     animation: loading-container 5s, move 4s;
     animation-fill-mode: forwards;
@@ -39,7 +39,7 @@ body {
     display: block;
     position: relative;
     left: 50%;
-    top: 50%;
+    top:25%;
     width: 150px;
     height: 150px;
     margin: -75px 0 0 -75px;
