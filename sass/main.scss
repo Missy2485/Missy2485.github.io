@@ -87,7 +87,7 @@ header {
   padding-bottom: 10px;
   display: grid;
 
-  @include small-mobile-only;
+  // @include small-mobile-only;
 
   nav {
     margin: auto 6%;
