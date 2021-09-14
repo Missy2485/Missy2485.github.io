@@ -451,7 +451,7 @@ Footer ul li i {
 
 @media screen and (min-width: 600px) {
   body {
-    min-width: 600px;
+    max-width: 600px;
     margin: 0 auto;
   }
 }
